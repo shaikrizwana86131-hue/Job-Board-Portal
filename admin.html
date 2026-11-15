@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - CareerConnect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <h1>CareerConnect</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#jobs">Find Jobs</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Admin Dashboard -->
+    <section class="admin-section">
+        <div class="admin-container">
+
+            <h2>Admin Dashboard</h2>
+            <p>Add and manage job opportunities</p>
+
+            <!-- Add Job Form -->
+            <form id="jobForm">
+
+                <label for="jobTitle">Job Title</label>
+                <input type="text" id="jobTitle"
+                       placeholder="Enter job title" required>
+
+                <label for="company">Company Name</label>
+                <input type="text" id="company"
+                       placeholder="Enter company name" required>
+
+                <label for="location">Job Location</label>
+                <select id="location" required>
+                    <option value="">Select Location</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Remote">Remote</option>
+                </select>
+
+                <label for="salary">Salary</label>
+                <input type="text" id="salary"
+                       placeholder="Example: ₹4-6 LPA" required>
+
+                <button type="submit" class="btn">
+                    Add Job
+                </button>
+
+            </form>
+
+            <p id="adminMessage" role="status"></p>
+
+            <!-- Job List -->
+            <h2 class="admin-jobs-title">Manage Jobs</h2>
+            <div id="adminJobList"></div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 CareerConnect. All Rights Reserved.</p>
+    </footer>
+
+    <script src="admin.js"></script>
+</body>
+</html>
